@@ -3,8 +3,8 @@ import { animate } from 'animejs';
 import { ThemeToggle } from './ThemeToggle';
 
 interface NavigationProps {
-  currentView: 'timer' | 'history';
-  onViewChange: (view: 'timer' | 'history') => void;
+  currentView: 'timer' | 'history' | 'why';
+  onViewChange: (view: 'timer' | 'history' | 'why') => void;
 }
 
 export function Navigation({ currentView, onViewChange }: NavigationProps) {
@@ -55,6 +55,16 @@ export function Navigation({ currentView, onViewChange }: NavigationProps) {
                 }`}
               >
                 History
+              </button>
+              <button
+                onClick={() => onViewChange('why')}
+                className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+                  currentView === 'why'
+                    ? 'bg-indigo-600 text-white shadow-lg transform scale-105'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                }`}
+              >
+                Why Deep Work
               </button>
             </div>
             
