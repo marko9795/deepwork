@@ -64,10 +64,10 @@ export function TimerDisplay({ timerState, totalTime, onStart, onPause, onReset 
     <div className="flex flex-col items-center space-y-8">
       {/* Mode indicator */}
       <div className="text-center">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+        <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2 transition-colors duration-200">
           {getModeLabel()}
         </h2>
-        <p className="text-gray-600">
+        <p className="text-gray-600 dark:text-gray-400 transition-colors duration-200">
           Session {timerState.sessionsCompleted + 1}
         </p>
       </div>
@@ -79,16 +79,17 @@ export function TimerDisplay({ timerState, totalTime, onStart, onPause, onReset 
           size={300}
           strokeWidth={12}
           color={getModeColor()}
-          backgroundColor="#f3f4f6"
+          backgroundColor="rgb(243 244 246 / 1)"
+          backgroundColorDark="rgb(75 85 99 / 1)"
         />
         
         {/* Time display in center */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
-            <div className="text-6xl font-mono font-bold text-gray-800 mb-2">
+            <div className="text-6xl font-mono font-bold text-gray-800 dark:text-white mb-2 transition-colors duration-200">
               {formatTime(timerState.timeLeft)}
             </div>
-            <div className="text-sm text-gray-500 uppercase tracking-wide">
+            <div className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wide transition-colors duration-200">
               {timerState.isRunning ? 'Running' : 
                timerState.isPaused ? 'Paused' : 'Ready'}
             </div>

@@ -37,23 +37,23 @@ export function SessionStats({ sessions }: SessionStatsProps) {
 
   return (
     <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-      <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-6 text-white opacity-0">
+      <div className="bg-gradient-to-r from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700 rounded-xl p-6 text-white opacity-0 shadow-lg dark:shadow-blue-900/25">
         <h3 className="text-sm font-medium opacity-90">Total Sessions</h3>
         <p className="text-3xl font-bold mt-2">{completedSessions.length}</p>
       </div>
 
-      <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-6 text-white opacity-0">
+      <div className="bg-gradient-to-r from-green-500 to-green-600 dark:from-green-600 dark:to-green-700 rounded-xl p-6 text-white opacity-0 shadow-lg dark:shadow-green-900/25">
         <h3 className="text-sm font-medium opacity-90">Total Time</h3>
         <p className="text-3xl font-bold mt-2">{formatDuration(totalTime)}</p>
       </div>
 
-      <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-6 text-white opacity-0">
+      <div className="bg-gradient-to-r from-purple-500 to-purple-600 dark:from-purple-600 dark:to-purple-700 rounded-xl p-6 text-white opacity-0 shadow-lg dark:shadow-purple-900/25">
         <h3 className="text-sm font-medium opacity-90">Today</h3>
         <p className="text-3xl font-bold mt-2">{formatDuration(todayTime)}</p>
         <p className="text-sm opacity-75 mt-1">{todaySessions.length} sessions</p>
       </div>
 
-      <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl p-6 text-white opacity-0">
+      <div className="bg-gradient-to-r from-orange-500 to-orange-600 dark:from-orange-600 dark:to-orange-700 rounded-xl p-6 text-white opacity-0 shadow-lg dark:shadow-orange-900/25">
         <h3 className="text-sm font-medium opacity-90">This Week</h3>
         <p className="text-3xl font-bold mt-2">{formatDuration(weekTime)}</p>
         <p className="text-sm opacity-75 mt-1">{weekSessions.length} sessions</p>

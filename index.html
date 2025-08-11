@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>DeepWorkClock - Focus Timer & Session Tracker</title>
+    <meta name="description" content="Beautiful Pomodoro timer with session tracking. Boost your productivity with DeepWorkClock - the modern focus timer for deep work sessions." />
+    <script>
+      // Prevent flash of unstyled content for dark mode
+      (function() {
+        const stored = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && systemDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

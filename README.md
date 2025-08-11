@@ -1,10 +1,11 @@
-# DeepWork Timer ⚡
+# DeepWorkClock ⚡
 
-A beautiful, modern deep work timer web application with session tracking and elegant animations. Built with React, TypeScript, and Anime.js.
+A beautiful, modern deep work timer web application with session tracking, dark mode, and elegant animations. Built with React, TypeScript, and Anime.js.
 
 ## ✨ Features
 
 - **Beautiful Timer Interface**: Circular progress indicator with smooth anime.js animations
+- **Dark & Light Mode**: Automatic system preference detection with manual toggle
 - **Pomodoro-style Timer**: Work sessions, short breaks, and long breaks
 - **Session Logging**: Automatically tracks completed deep work sessions
 - **Session History**: View your deep work progress with multiple filter options
@@ -156,4 +157,4 @@ MIT License - feel free to use for personal or commercial projects.
 
 ---
 
-Built with ❤️ using modern web technologies. Ready to deploy and help you achieve deep work focus!
+Built with ❤️ using modern web technologies. Ready to deploy at **deepworkclock.com** and help you achieve deep work focus!

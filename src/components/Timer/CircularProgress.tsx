@@ -7,6 +7,7 @@ interface CircularProgressProps {
   strokeWidth?: number;
   color?: string;
   backgroundColor?: string;
+  backgroundColorDark?: string;
   animated?: boolean;
 }
 
@@ -16,6 +17,7 @@ export function CircularProgress({
   strokeWidth = 8, 
   color = '#6366f1', 
   backgroundColor = '#e5e7eb',
+  backgroundColorDark = '#374151',
   animated = true 
 }: CircularProgressProps) {
   const pathRef = useRef<SVGPathElement>(null);
@@ -55,6 +57,16 @@ export function CircularProgress({
           stroke={backgroundColor}
           strokeWidth={strokeWidth}
           fill="none"
+          className="dark:hidden"
+        />
+        <circle
+          cx={center}
+          cy={center}
+          r={radius}
+          stroke={backgroundColorDark}
+          strokeWidth={strokeWidth}
+          fill="none"
+          className="hidden dark:block"
         />
         
         {/* Progress circle */}

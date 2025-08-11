@@ -36,12 +36,12 @@ export function SessionHistory() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 p-6 transition-colors duration-200">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Session History</h1>
-          <p className="text-gray-600">Track your deep work progress and achievements</p>
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4 transition-colors duration-200">Session History</h1>
+          <p className="text-gray-600 dark:text-gray-400 transition-colors duration-200">Track your deep work progress and achievements</p>
         </div>
 
         {/* Stats */}
@@ -56,7 +56,7 @@ export function SessionHistory() {
               className={`px-4 py-2 rounded-full font-medium transition-all duration-200 ${
                 filter === filterOption
                   ? 'bg-indigo-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md'
+                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-md dark:shadow-gray-900/25 border dark:border-gray-600'
               }`}
             >
               {filterOption.charAt(0).toUpperCase() + filterOption.slice(1)}
@@ -78,8 +78,8 @@ export function SessionHistory() {
         ) : (
           <div className="text-center py-12">
             <div className="text-6xl mb-4">⏰</div>
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">No sessions yet</h3>
-            <p className="text-gray-500">
+            <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-200">No sessions yet</h3>
+            <p className="text-gray-500 dark:text-gray-400 transition-colors duration-200">
               {filter === 'all' 
                 ? 'Start your first deep work session to see it here!'
                 : `No sessions found for the selected ${filter} period.`
